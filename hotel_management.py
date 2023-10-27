@@ -1,5 +1,7 @@
+# Importing Dependencies
 pip install mysql-connector-python
 import mysql.connector
+
 
 # Connect to the MySQL database
 db = mysql.connector.connect(
@@ -11,6 +13,7 @@ db = mysql.connector.connect(
 
 # Create a cursor object to interact with the database
 cursor = db.cursor()
+
 # Initialize the database schema for rooms
 cursor.execute("""
     CREATE TABLE IF NOT EXISTS rooms (
@@ -21,7 +24,7 @@ cursor.execute("""
 """)
 cursor.execute("""
    
-    insert into rooms values (106,null,150);
+    insert into rooms values (106, null, 150);
 """)
 # Function to display room availability
 def display_room_availability():
